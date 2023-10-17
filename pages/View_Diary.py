@@ -23,8 +23,8 @@ st.write("## View Diary")
 diary = pd.read_csv("user.csv")
 today = diary.loc[diary['Date']==a]
 st.dataframe(today)
-if today['heat'] == "Yes":
-    if today['PUFA'].sum() >= 5.0:
+if today['Heat'] == "Yes":
+    if today['Polyunsaturated Fat'].sum() >= 5.0:
      st.write("Heating Polyunsaturated Fatty Acids can cause them to oxidize and become harmful to your health. Try to avoid heating foods with high PUFA content.")
 
 
